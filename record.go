@@ -37,10 +37,28 @@ type RecordResponse struct {
 
 //“域名”“解析记录”列表中的“域名”数据结构，和“域名列表”中的略有不同
 type DomainInRecordList struct {
-	Domain
-	Ttl      int
-	Id       int      `json:",string"`
-	DnspodNs []string `json:"dnspod_ns"`
+	Ttl              int
+	Id               string   `json:"id"`
+	DnspodNs         []string `json:"dnspod_ns"`
+	Status           string   `json:"status"`
+	GroupId          string   `json:"group_id"`
+	SearchenginePush string   `json:"searchengine_push"`
+	IsMark           string   `json:"is_mark"`
+	CnameSpeedup     string   `json:"cname_speedup"`
+	Remark           string   `json:"remark"`
+	CreatedOn        string   `json:"created_on"`
+	UpdatedOn        string   `json:"updated_on"`
+	QProjectId       int      `json:"q_project_id"`
+	Punycode         string   `json:"punycode"`
+	ExtStatus        string   `json:"ext_status"`
+	SrcFlag          string   `json:"src_flag"`
+	Name             string   `json:"name"`
+	Grade            string   `json:"DP_Free"`
+	GradeTitle       string   `json:"grade_title"`
+	IsVip            string   `json:"is_vip"`
+	Owner            string   `json:"owner"`
+	Records          string   `json:"records"`
+	MinTtl           int      `json:"min_ttl"`
 }
 
 type RecordModifyResponse struct {
